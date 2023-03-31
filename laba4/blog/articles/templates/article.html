@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>{{post.title}}</title>
+    <header>
+    <head>
+        <link rel="stylesheet" href="{{ STATIC_URL }}/static/article2.css">
+    </head>
+    <body class="article">
+        <div class="header">
+        <img src= "https://yspu.org/images/7/79/Logo1_свиток_с_книгами_и_шапкой.png" width="180" height="120">
+        <a href="../"> Все записи</a>
+    </div>
+    <div class="articlediv">
+        <div class="one-post">
+            <h2 class="post-title">{{ post.title }}</h2>
+            <div class="article-info">
+            <div class="article-author">{{ post.author.username }}</div>
+            <div class="article-created-date">{{ post.created_date }}</div>
+            </div>
+            <p class="article-text">{{ post.get_fulltext }}</p>
+        </div>
+    </div>
+    </body>
